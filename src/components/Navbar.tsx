@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Heart, Instagram, Facebook } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import clsx from 'clsx';
 
@@ -28,8 +28,8 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-6">
+          <div className="hidden md:flex md:items-center md:gap-6">
+            <div className="flex items-baseline space-x-4 lg:space-x-6">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -46,6 +46,14 @@ export default function Navbar() {
                   {link.name}
                 </NavLink>
               ))}
+            </div>
+            <div className="flex items-center gap-3 border-l border-primary/20 pl-6">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors" aria-label="Facebook">
+                <Facebook className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -89,6 +97,14 @@ export default function Navbar() {
                   {link.name}
                 </NavLink>
               ))}
+              <div className="flex items-center gap-4 px-3 pt-4 pb-2 border-t border-primary/10 mt-2">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors" aria-label="Instagram">
+                  <Instagram className="h-6 w-6" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-primary transition-colors" aria-label="Facebook">
+                  <Facebook className="h-6 w-6" />
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
