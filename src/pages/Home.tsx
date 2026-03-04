@@ -159,7 +159,7 @@ export default function Home() {
 
                 {/* The Hero Cat - Larger & Sharper */}
                 <img 
-                  src="/public/img/cat.png" 
+                  src="/img/cat.png" 
                   alt="Peaceful Angel Cat" 
                   className="w-[640px] lg:w-[900px] h-auto object-contain relative z-10"
                   style={{ 
